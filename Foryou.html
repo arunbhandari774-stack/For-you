@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Very Important Question for Mahima ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Realistic romantic garden sunset background with fairy lights and rose petals */
+      background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), 
+                  url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Glassmorphism Card for a premium romantic aesthetic */
+    .container {
+      background: rgba(255, 255, 255, 0.82);
+      padding: 2.5rem 2rem;
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      max-width: 440px;
+      width: 90%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .icon-container {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animated-heart {
+      font-size: 5.5rem;
+      animation: pulse 1.2s infinite ease-in-out;
+      display: inline-block;
+      filter: drop-shadow(0 8px 20px rgba(255, 51, 102, 0.4));
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+
+    h1 {
+      color: #ff2a5f;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      line-height: 1.3;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      min-height: 70px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      touch-action: manipulation;
+    }
+
+    .yes-btn {
+      background: linear-gradient(135deg, #ff3366 0%, #ff527b 100%);
+      color: white;
+      box-shadow: 0 6px 20px rgba(255, 51, 102, 0.4);
+      z-index: 10;
+    }
+
+    .yes-btn:hover {
+      background: linear-gradient(135deg, #ff527b 0%, #ff758f 100%);
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+    }
+
+    .no-btn {
+      background-color: #64748b;
+      color: white;
+      transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    /* Celebration Screen */
+    .celebration {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .celebration h1 {
+      font-size: 1.7rem;
+      color: #e11d48;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Floating Hearts Animation */
+    .heart {
+      position: fixed;
+      font-size: 1.8rem;
+      animation: floatUp 3s linear infinite;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    /* Subtle glowing fairy lights ambient animation */
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 10px #ffdd80, 0 0 20px #ffdd80;
+      animation: twinkle 4s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Fairy Light Particles -->
+  <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+  <div class="sparkle" style="top: 70%; left: 80%; animation-delay: 1s;"></div>
+  <div class="sparkle" style="top: 30%; left: 85%; animation-delay: 2s;"></div>
+  <div class="sparkle" style="top: 80%; left: 10%; animation-delay: 1.5s;"></div>
+
+  <!-- Main Question Card -->
+  <div class="container" id="mainCard">
+    <div class="icon-container">
+      <span class="animated-heart">💖</span>
+    </div>
+    <h1>Will you be my girlfriend, Mahima? ❤️</h1>
+    
+    <div class="buttons">
+      <button class="yes-btn" id="yesBtn">Yes!</button>
+      <button class="no-btn" id="noBtn">No</button>
+    </div>
+  </div>
+
+  <!-- Celebration Card -->
+  <div class="container celebration" id="celebrationCard">
+    <div class="icon-container">
+      <span class="animated-heart">👩‍❤️‍👨</span>
+    </div>
+    <h1>I knew you loved me and you would accept me (I love you so much) ❤️✨</h1>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const mainCard = document.getElementById('mainCard');
+    const celebrationCard = document.getElementById('celebrationCard');
+
+    // Sequence of phrases requested
+    const noPhrases = [
+      "Are you sure?",
+      "Don't do this",
+      "You will regret it",
+      "Just say yes",
+      "Come on",
+      "Say yes"
+    ];
+
+    let clickCount = 0;
+    let currentScale = 1.0;
+
+    function handleNoClick() {
+      if (clickCount < noPhrases.length) {
+        // Change text to current phrase
+        noBtn.innerText = noPhrases[clickCount];
+        
+        // Shrink the button slightly each time
+        currentScale -= 0.12;
+        noBtn.style.transform = `scale(${Math.max(currentScale, 0.35)})`;
+        
+        // Grow the Yes button slightly to encourage clicking
+        yesBtn.style.transform = `scale(${1 + (clickCount + 1) * 0.08})`;
+
+        clickCount++;
+      } else {
+        // Disappear completely after all phrases are finished
+        noBtn.style.display = 'none';
+      }
+    }
+
+    // Trigger on both desktop click and mobile tap
+    noBtn.addEventListener('click', handleNoClick);
+
+    // Celebration when clicking "Yes"
+    yesBtn.addEventListener('click', () => {
+      mainCard.style.display = 'none';
+      celebrationCard.style.display = 'flex';
+      createHearts();
+    });
+
+    // Generate floating hearts
+    function createHearts() {
+      const emojis = ['❤️', '💖', '💕', '💗', '✨', '😍', '🌹'];
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.classList.add('heart');
+          heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+          heart.style.left = Math.random() * 100 + 'vw';
+          heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+          document.body.appendChild(heart);
+
+          setTimeout(() => heart.remove(), 4000);
+        }, i * 100);
+      }
+    }
+  </script>
+</body>
+</html>
